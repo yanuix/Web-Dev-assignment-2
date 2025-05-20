@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last of Us Universe | Home</title>
+  <meta name="description" content="Explore the world of The Last of Us - the acclaimed video game series and HBO adaptation.">
+  <link rel="preload" href="fonts/TheLastofUs-Rough.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="SS.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Importing Oswald font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+    /* Fallback font while custom font loads */
+    .font-loading body {
+      font-family: 'Oswald', sans-serif;
+    }
+    /* Final font once custom font is loaded */
+    .font-loaded body {
+      font-family: 'The Last of Us Rough', 'Oswald', sans-serif;
+    }
+    
+    /* Enhanced Hero Section */
+    #showcase {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('images/showcase-enhanced.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    
+    .showcase-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    #showcase h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      animation: fadeIn 1s ease;
+    }
+    
+    #showcase p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      animation: fadeIn 1.2s ease;
+    }
+    
+    .btn-main {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 2px solid var(--white);
+      transition: all 0.3s ease;
+      animation: fadeIn 1.4s ease;
+    }
+    
+    .btn-main:hover {
+      background: transparent;
+      color: var(--white);
+    }
+    
+    /* Featured Section */
+    .featured-section {
+      padding: 5rem 0;
+      background: var(--dark-gray);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 3px;
+      background: var(--white);
+      margin: 1.5rem auto 0;
+    }
+    
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .featured-card {
+      background: var(--black);
+      border: 1px solid var(--medium-gray);
+      border-radius: 4px;
+      overflow: visible;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .featured-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    
+    .image-container {
+      background-color: var(--dark-gray);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      border-bottom: 1px solid var(--medium-gray);
+    }
+    
+    .featured-card img {
+      width: 100%;
+      height: 100%;
+      max-height: 270px;
+      object-fit: contain;
+    }
+    
+    .card-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-content p {
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    
+    /* Highlights Section */
+    .highlights-section {
+      padding: 5rem 0;
+      background: var(--black);
+    }
+    
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .highlight-item i {
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      #showcase h1 {
+        font-size: 3rem;
+      }
+      
+      #showcase p {
+        font-size: 1.2rem;
+      }
+      
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .featured-card img {
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Add class to body to indicate font is loading
+    document.documentElement.classList.add('font-loading');
+    const font = new FontFace('The Last of Us Rough', 'url(fonts/TheLastofUs-Rough.ttf)');
+    
+    font.load().then(() => {
+      document.fonts.add(font);
+      document.documentElement.classList.remove('font-loading');
+      document.documentElement.classList.add('font-loaded');
+    }).catch((error) => {
+      console.error('Font loading failed:', error);
+      document.documentElement.classList.remove('font-loading');
+    });
+  </script>
+
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span>THE LAST OF US</span> UNIVERSE</h1>
+      </div>
+      <nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="gamepage.html">Games</a></li>
+          <li><a href="series.html">Series</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <div class="showcase-content">
+      <h1>ENTER THE WORLD OF THE LAST OF US</h1>
+      <p>Experience the critically acclaimed journey of survival, love, and humanity</p>
+      <a href="#featured" class="btn-main">Begin Exploration</a>
+    </div>
+  </section>
+
+  <section id="featured" class="featured-section">
+    <div class="container">
+      <h2 class="section-title">FEATURED EXPERIENCES</h2>
+      <div class="featured-grid">
+        <div class="featured-card">
+          <div class="image-container">
+            <img src="images/lou.jpg" alt="The Last of Us Game">
+          </div>
+          <div class="card-content">
+            <h3>THE GAMES</h3>
+            <p>Discover the award-winning series that redefined narrative storytelling in gaming.</p>
+            <a href="gamepage.html" class="button_1">Explore Games</a>
+          </div>
+        </div>
+        
+        <div class="featured-card">
+          <div class="image-container">
+            <img src="images/Lou hbo2.jpg" alt="HBO Series">
+          </div>
+          <div class="card-content">
+            <h3>THE SERIES</h3>
+            <p>Watch the stunning HBO adaptation starring Pedro Pascal and Bella Ramsey.</p>
+            <a href="series.html" class="button_1">Watch Series</a>
+          </div>
+        </div>
+        
+        <div class="featured-card">
+          <div class="image-container">
+            <img src="images/lou cha.jpg" alt="Characters">
+          </div>
+          <div class="card-content">
+            <h3>THE CHARACTERS</h3>
+            <p>Meet Joel, Ellie and the unforgettable characters of this world.</p>
+            <a href="characters.html" class="button_1">View Characters</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="section-title">WHY THE LAST OF US?</h2>
+      <div class="featured-grid">
+        <div class="card-content">
+          <div class="highlight-item">
+            <i class="fas fa-trophy"></i>
+            <span>300+ Game of the Year Awards</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-star"></i>
+            <span>9.5/10 IMDb Rating</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-award"></i>
+            <span>8 Emmy Awards</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-heart"></i>
+            <span>Beloved by millions worldwide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>THE LAST OF US UNIVERSE</h3>
+          <p>Your complete guide to the world of The Last of Us</p>
+        </div>
+        <div class="social-links">
+          <!-- Social media links -->
+          <a href="https://www.facebook.com/naughtydog" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/Naughty_Dog" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/naughty_dog_inc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/user/naughtydog" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <p>&copy; 2023 THE LAST OF US UNIVERSE. All rights reserved</p>
+    </div>
+  </footer>
+
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <script src="Js.js"></script>
+</body>
+</html>

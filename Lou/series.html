@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last of Us Universe | HBO Series</title>
+  <meta name="description" content="Explore the HBO adaptation of The Last of Us starring Pedro Pascal and Bella Ramsey">
+  <link rel="preload" href="fonts/TheLastofUs-Rough.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="SS.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Importing Oswald font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+    /* Fallback font while custom font loads */
+    .font-loading body {
+      font-family: 'Oswald', sans-serif;
+    }
+    /* Final font once custom font is loaded */
+    .font-loaded body {
+      font-family: 'The Last of Us Rough', 'Oswald', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Add class to body to indicate font is loading
+    document.documentElement.classList.add('font-loading');
+    const font = new FontFace('The Last of Us Rough', 'url(fonts/TheLastofUs-Rough.ttf)');
+    
+    font.load().then(() => {
+      document.fonts.add(font);
+      document.documentElement.classList.remove('font-loading');
+      document.documentElement.classList.add('font-loaded');
+    }).catch((error) => {
+      console.error('Font loading failed:', error);
+      document.documentElement.classList.remove('font-loading');
+    });
+  </script>
+
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span>THE LAST OF US</span> UNIVERSE</h1>
+      </div>
+      <nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gamepage.html">Games</a></li>
+          <li class="current"><a href="series.html">Series</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="main">
+    <div class="container">
+      <h1 class="page-title">THE HBO SERIES</h1>
+      
+      <div class="content-card">
+        <div class="series-header">
+          <img src="images/lou hbo.jpg" alt="The Last of Us HBO Series Poster">
+          <div class="series-info">
+            <h2>THE LAST OF US (2023)</h2>
+            <div class="series-meta">
+              <span><i class="fas fa-star"></i> 9.5/10 IMDb</span>
+              <span><i class="fas fa-tv"></i> HBO</span>
+              <span><i class="fas fa-calendar-alt"></i> 2023</span>
+            </div>
+            <p>The series takes place 20 years after modern civilization has been destroyed by a deadly fungus. Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal and heartbreaking journey.</p>
+            <br>
+            <div class="purchase-options">
+              <a href="https://www.hbomax.com/series/urn:hbo:series:GyofRQHeuJ6fiQEAAAEy" class="purchase-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-play"></i> Watch on HBO Max
+              </a>
+              <br>
+              <a href="https://www.youtube.com/watch?v=uLtkt8BonwM" class="purchase-btn" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube"></i> Watch Trailer
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <h3>MAIN CAST</h3>
+        <div class="cast-grid">
+          <div class="cast-member">
+            <img src="images/joel.jpg" alt="Pedro Pascal as Joel">
+            <h4>Pedro Pascal</h4>
+            <p>as Joel Miller</p>
+          </div>
+          <div class="cast-member">
+            <img src="images/ellie.jpg" alt="Bella Ramsey as Ellie">
+            <h4>Bella Ramsey</h4>
+            <p>as Ellie Williams</p>
+          </div>
+          <div class="cast-member">
+            <img src="images/tess.jpg" alt="Anna Torv as Tess">
+            <h4>Anna Torv</h4>
+            <p>as Tess</p>
+          </div>
+          <div class="cast-member">
+            <img src="images/marlene.jpg" alt="Merle Dandridge as Marlene">
+            <h4>Merle Dandridge</h4>
+            <p>as Marlene</p>
+          </div>
+        </div>
+        
+        <h3>EPISODES</h3>
+        <div class="episodes-list">
+          <div class="episode">
+            <h4>1. When You're Lost in the Darkness</h4>
+            <p>January 15, 2023</p>
+            <p>In 2003, a fungal outbreak ravages the United States, transforming its human hosts into terrifying creatures. Joel loses his daughter Sarah in the chaos. Twenty years later, he's tasked with smuggling a teenage girl named Ellie out of a quarantine zone, but what starts as a simple job soon becomes a brutal journey.</p>
+          </div>
+          <div class="episode">
+            <h4>2. Infected</h4>
+            <p>January 22, 2023</p>
+            <p>Joel and Tess begin their journey with Ellie, heading to the Massachusetts State House to meet with the Fireflies. Along the way, they discover the gruesome reality of the Infected.</p>
+          </div>
+          <div class="episode">
+            <h4>3. Long, Long Time</h4>
+            <p>January 29, 2023</p>
+            <p>Joel and Ellie make their way through the wilderness and meet Bill and Frank, two survivalists living alone in their own town.</p>
+          </div>
+          <!-- Add more episodes here -->
+          <div class="episode">
+            <h4>4. Please Hold to My Hand</h4>
+            <p>February 5, 2023</p>
+            <p>Joel and Ellie reach a seemingly peaceful town, only to discover it's dark secrets.</p>
+          </div>
+          <div class="episode">
+            <h4>5. Endure and Survive</h4>
+            <p>February 12, 2023</p>
+            <p>A mysterious package sends Joel and Ellie on a dangerous mission.</p>
+          </div>
+          <div class="episode">
+            <h4>6. Kin</h4>
+            <p>February 19, 2023</p>
+            <p>After ignoring the advice of locals, Joel and Ellie descend deeper into dangerous territory in search of the Fireflies – and Tommy.</p>
+          </div>
+          <div class="episode">
+            <h4>7. Left Behind</h4>
+            <p>February 26, 2023</p>
+            <p>As Joel fights to survive, Ellie looks back on the night that changed everything.</p>
+          </div>
+          <div class="episode">
+            <h4>8. When We Are in Need</h4>
+            <p>March 5, 2023</p>
+            <p>Ellie crosses paths with a vengeful group of survivors – and draws the attention of its leader. A weakened Joel faces a new threat.</p>
+          </div>
+          <div class="episode">
+            <h4>9. Look for the Light</h4>
+            <p>March 12, 2023</p>
+            <p>A pregnant Anna places her trust in a lifelong friend. Later, Joel and Ellie near the end of their journey.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>THE LAST OF US UNIVERSE</h3>
+          <p>Your complete guide to the world of The Last of Us</p>
+        </div>
+        <div class="social-links">
+          <!-- Social media links -->
+          <a href="https://www.facebook.com/naughtydog" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/Naughty_Dog" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/naughty_dog_inc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/user/naughtydog" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <p>&copy; 2023 THE LAST OF US UNIVERSE. All rights reserved</p>
+    </div>
+  </footer>
+
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <script src="Js.js"></script>
+</body>
+</html>
